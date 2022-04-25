@@ -1,0 +1,24 @@
+Iniciar proyecto Electron
+> npm init
+> npm install --save-dev electron
+> npm install --save-dev electron@16.0.5
+> npm install --save-dev electron-reload
+> npm install --save-dev electron-reloader
+
+> npm install say --save
+> npm install bootstrap@latest --save
+> npm install bootstrap@4.6.1 --save
+> npm install popper.js --save
+> npm install jquery --save
+
+Agregar en Package.json > "scripts"
+"start": "electron ."
+
+Agregar en Package.json (al nivel de "dependencies" y "scripts")
+"main": "src/main.js",
+
+Paquetes para compilar y generar un instalador .exe
+> npm install electron-builder --save-dev
+
+Paquetes para compilar y generar un ejecutable
+> npm install electron-packager --save-dev

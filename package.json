@@ -1,0 +1,47 @@
+{
+  "name": "unu-tts",
+  "version": "1.0.0",
+  "productName": "UnU TTS",
+  "description": "Text to speech",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "packager-win": "electron-packager ./ --platform=win32 --arch=ia32 --prune=false --app-version=1.0.0 --overwrite --app-copyright=\"Creative Commons Atribución 4.0 Internacional\" --icon=public/ics/icon.ico --version-string.ProductName=\"UnU TTS\" --ignore=\"(dist|.gitignore|LICENSE|README.md)\"",
+    "build-electron": "electron-builder --ia32 --x64 -w"
+  },
+  "author": "Sora Gefroren",
+  "license": "CC-BY-4",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.0.0",
+    "popper.js": "^1.16.1",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "say": "^0.16.0"
+  },
+  "devDependencies": {
+    "electron": "^16.0.5",
+    "electron-reload": "^2.0.0-alpha.1",
+    "electron-builder": "^22.14.13",
+    "electron-packager": "^15.4.0",
+    "electron-reloader": "^1.2.2",
+    "i": "^0.3.7"
+  },
+  "build": {
+    "appId": "com.sg.unutts",
+    "productName": "UnU TTS",
+    "artifactName": "UnU TTS.${ext}",
+    "copyright": "Creative Commons Atribución 4.0 Internacional",
+    "win": {
+      "target": ["portable"],
+      "icon": "public/ics/icon.ico"
+    },
+    "portable": {
+      "artifactName": "UnU TTS.${ext}",
+      "splashImage": "public/ics/icon.png"
+    },
+    "directories": {
+      "output": "dist/UnU-TTS-Build-ai32"
+    }
+  }
+}
